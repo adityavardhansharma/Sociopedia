@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aditya Vardhan Sharma - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/35f53b5bcf.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div id="header" class="header1">
+    <div class="container">
+        <nav>
+            <h2 class="logo"><span style="color: cornflowerblue">MY</span> PORTFOLIO</h2>
+            <ul>
+                <li><a href="#"> <i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#"> <i class="fa-solid fa-info"></i> About</a></li>
+                <li><a href="#"> <i class="fa-solid fa-briefcase"></i> Projects</a></li>
+                <li><a href="#"> <i class="fa-solid fa-address-book"></i> Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <div class="text-container">
+                <p>Hi, I'm <span>Aditya Vardhan Sharma</span></p>
+                <h1>I am a <span class="auto-type"></span></h1>
+            </div>
+            <img src="images/developer_male.jpg" class="u">
+        </div>
+    </div>
+</div>
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/developer_male.jpg" class="u1">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title"><span id="z">About</span> Me</h1>
+                <p>Hello, I am Aditya Vardhan Sharma, a 6th-semester student at MIET Jammu.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Frontend Developer</span></li>
+                        <li><span>UI/UX Designer</span></li>
+                        <li><span>Python</span></li>
+                        <li><span>C++</span></li>
+                        <li><span>My SQL</span></li>
+                        <li><span>Google Cloud</span></li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Internship At IIT Jammu On Web Development</span></li>
+                        <li><span>Python Workshop</span></li>
+                        <li><span>AI/ML Workshop</span></li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>High School:</span> G.D. Goenka Public School </li>
+                        <li><span>B.E:</span> Model Institute OF Engineering & Technology</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id ="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My <span id="z">Projects</span></h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/w1.png">
+                <div class="layer">
+                    <h3>Brotdose 24*7</h3>
+                    <p>Brotdose 24*7 is a website where users can order food online while also having a subscription option.</p>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-solid fa-earth-americas"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/w2.png">
+                <div class="layer">
+                    <h3>Calculator</h3>
+                    <p>This is a simple calculator that can perform basic operations such as addition, subtraction, multiplication, division></p>
+                    <a href="#"><i class="fa-brands fa-github"></i></i></a>
+                    <a href="#" ><i class="fa-solid fa-earth-americas"></i></a>
+                </div>
+
+            </div>
+            <div class="work">
+                <img src="images/w3.png">
+                <div class="layer">
+                <h3>Multi-Step Form</h3>
+                <p>It is a multi-step form that allows users to fill out a form in multiple steps.</p>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-solid fa-earth-americas"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+    </div>
+</div>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+    var typed = new Typed(".auto-type", {
+        strings: ["Web Developer", "Student"],
+        startDelay: 200,
+        smartBackspace: true,
+        typeSpeed: 100,
+        backSpeed: 100,
+        loop: true
+    });
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for (var i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active-link");
+        }
+
+        for (var i = 0; i < tabcontents.length; i++) {
+            tabcontents[i].classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>
